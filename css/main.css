@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+    background-color: #F4F4F4;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+ 
+.main {
+    width: 870px;
+    height: 200px;
+    background-color: aqua;
+}
+ 
+.sidebar {
+    width: 270px;
+    height: 200px;
+    background-color: rgb(9, 83, 21);
+
+
+}
+
+
+.card {
+    width: 270px;
+   background-color: white;
+}
+
+.card__badges {
+
+}
+.card__badge {
+
+}
+
+.card__img {
+
+}
+
+.card__content {
+    padding: 15px 15px 20px;
+}
+
+.card__title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.16;
+    color: #000000;
+}
+
+.card__term {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.14;
+    color: #000000;
+}
+.card__metro {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.14;
+    color: #000000;
+} 
+
+.card__metro::before {
+    margin-right: 10px;
+    content: "";
+    display: inline-block;
+    vertical-align: baseline;
+    width: 16px;
+    height: 11px;
+    background-image: url('/img/icons/Vector.svg');
+    background-repeat: no-repeat;
+    background-size: initial;
+}
+.card__addres {
+    font-size: 14px;
+    line-height: 1.14;
+    color: #777777;
+}
