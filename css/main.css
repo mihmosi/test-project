@@ -31,10 +31,6 @@ img {
  
 .sidebar {
     width: 270px;
-    height: 200px;
-    background-color: rgb(9, 83, 21);
-
-
 }
 
 .cards-holder {
@@ -164,4 +160,81 @@ a.card-link:hover{
     display: inline-block;
     margin-right: 10px;
     vertical-align: bottom;
+}
+
+/* Sidebar */
+
+.widget {
+
+}
+.widget__title{
+    position: relative;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.16;
+    color: #000000;
+}
+.widget__title::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    /* background-color: red; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url('./../img/icons/chevron-up.svg');
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: center;
+
+}
+.widget__body{
+
+}
+/* Locations buttons group */
+
+.location {
+}
+.location__row {
+    display: flex;
+}
+
+.location__row:first-child{
+    overflow: hidden;
+    border-radius: 4px 4px 0 0 ;
+    border: 1px solid #D6D6D6;
+}
+.location__row:last-child{
+    overflow: hidden;
+    border-radius: 0 0 4px 4px;
+    border: 1px solid #D6D6D6;
+    border-top: none;
+} 
+
+.location__btn {
+    flex-grow: 1;
+    font-family: inherit;
+    height: 50px;
+    padding: 0 15px;
+    
+    background-color: transparent;
+    border: none;
+
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #3C3C3C;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.location__btn:hover{
+    background-color: #faf1d2;
+}
+
+.location__btn--active {
+    background-color: #FFCF26;
 }
