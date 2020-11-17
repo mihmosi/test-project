@@ -189,13 +189,13 @@ a.card-link:hover{
     background-position: center;
 
 }
-.widget__body{
+/* .widget__body{
 
-}
+} */
 /* Locations buttons group */
 
-.location {
-}
+/* .location {
+} */
 .location__row {
     display: flex;
 }
@@ -347,7 +347,7 @@ a.card-link:hover{
     line-height: 1.18;
     color: #000000;
 }
-.checkbox__real:checked + .checkbox__title {
+.checkbox__real:checked ~ .checkbox__title {
     font-weight: 500;
 }
 
@@ -366,4 +366,86 @@ a.card-link:hover{
     background-image: url('./../img/icons/check.svg');
     background-size: initial;
     background-position: center;
+}
+
+/* hiden-elements widget */
+
+.widget__hidden {
+    display: none;
+}
+
+.widget__show-hidden {
+    cursor: pointer;
+    display: inline-block;
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 0;
+    line-height: 1.19;
+    color: #4290C9;
+    transition: color 0.2s ease-in;
+    margin-top: 15px;
+}
+
+.widget__show-hidden:hover{
+    color: #024d83;
+    text-decoration: underline;
+} 
+
+/* toggle */
+
+.toggle {
+    cursor: pointer;
+}
+.toggle__real {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    opacity: 0;
+    appearance: none;
+}
+.toggle__fake {
+    position: relative;
+    display: inline-block;
+    width: 37px;
+    height: 20px;
+    background: #C4C4C4;
+    border-radius: 10px;
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+
+.toggle__fake::before{
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: #3C3C3C;
+    border-radius: 50%;
+    transition: all 0.2s ease-in
+}
+
+.toggle__real:checked + .toggle__fake {
+    background: #FFE074;
+}
+
+.toggle__real:checked + .toggle__fake::before{
+    left: 19px;
+    right: 2px;
+}
+
+.toggle__title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.18;
+    color: #000000;
+}
+
+.toggle__real:checked ~ .toggle__title {
+    font-weight: 500;
 }
