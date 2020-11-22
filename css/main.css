@@ -57,6 +57,11 @@ img {
         box-shadow: 0px 0px 20px 4px rgb(0 0 0 / 37%);
         overflow-y: scroll;
         transform: translateX(-150%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .sidebar--mobile-active {
+        transform: translateX(-0);
     }
 }
 
@@ -555,7 +560,8 @@ a.card-link:hover{
 
 .toggle-sidebar {
     display: block;
-    position: absolute;
+    position: fixed;
+    z-index: 9;
     right: 15px;
     top: 7px;
     width: 45px;
@@ -577,7 +583,14 @@ a.card-link:hover{
     width: 30px;
     height: 5px;
     background-color: #FFFFFF;
+} 
+
+@media (min-width: 829px)  {
+    .toggle-sidebar {
+        display: none;
+    }
 }
+
 .menu-icon::before {
     position: absolute;
     left: 0;
